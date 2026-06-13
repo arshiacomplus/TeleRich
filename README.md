@@ -94,7 +94,4 @@ const BOT_TOKEN = "Enter your Telegram bot token";
 
 
 
-
-https://github.com/user-attachments/assets/c5091d84-6828-463a-990c-a9bf305cc962
-
 [ÐΛɌ₭ᑎΞ𐒡𐒡](https://darkness-web.pages.dev/) • | • [Telegram](https://t.me/Paradise_Of_Freedom) • | • [@MarkdownRenderBot](https://t.me/MarkdownRenderBot)
