@@ -42,7 +42,7 @@ cp .env.example .env
 nano .env # Insert your BOT_TOKEN
 
 # 4. Run
-python src/main.py
+python -m src.main
 ```
 *Note: Enable "Inline Mode" via [@BotFather](https://t.me/BotFather) for the inline feature to work.*
 
@@ -88,7 +88,7 @@ cp .env.example .env
 nano .env # توکن ربات خود را قرار دهید
 
 # ۴. اجرا
-python src/main.py
+python -m src.main
 ```
 *نکته: برای فعال‌سازی حالت اینلاین، قابلیت "Inline Mode" را در [@BotFather](https://t.me/BotFather) روشن کنید.*
 
