@@ -12,6 +12,8 @@ async def inline_handler(inline_query: InlineQuery):
     if not text:
         return
 
+    print(f"👀 [STEP 1] User typed in inline: {text[:20]}...")
+
     result = InlineQueryResultArticle(
         id="1",
         title= "Rich Message",
@@ -25,16 +27,20 @@ async def inline_handler(inline_query: InlineQuery):
 
 @router.chosen_inline_result()
 async def chosen_inline_handler(chosen: ChosenInlineResult):
+    print("🚀 [STEP 2] Telegram sent 'ChosenInlineResult' event!")
+
     text = chosen.query.strip()
     inline_message_id = chosen.inline_message_id
 
+    print(f"ℹ️ [INFO] Inline Message ID: {inline_message_id}")
+
     if not inline_message_id:
+        print("❌ [ERROR] Telegram didn't send 'inline_message_id'!")
         return
 
     is_html = text.startswith("<") or re.search(r'<\/?\w', text)
 
     await asyncio.sleep(0.5)
-
 
     body = {
         "inline_message_id": inline_message_id,
@@ -42,4 +48,9 @@ async def chosen_inline_handler(chosen: ChosenInlineResult):
         "rich_message": {"html": text} if is_html else {"markdown": text}
     }
 
-    await call_api("editMessageText", body)
+    print("🌐 [STEP 3] Sending editMessageText API call...")
+    try:
+        await call_api("editMessageText", body)
+        print("✅ [SUCCESS] API call finished successfully.")
+    except Exception as e:
+        print(f"❌ [CRITICAL ERROR] Python crashed during API call: {e}")
