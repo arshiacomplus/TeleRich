@@ -1,7 +1,14 @@
 import re
 import asyncio
 from aiogram import Router
-from aiogram.types import InlineQuery, InlineQueryResultArticle, InputTextMessageContent, ChosenInlineResult
+from aiogram.types import (
+    InlineQuery,
+    InlineQueryResultArticle,
+    InputTextMessageContent,
+    ChosenInlineResult,
+    InlineKeyboardMarkup,
+    InlineKeyboardButton
+)
 from src.utils.api import call_api
 
 router = Router()
@@ -14,14 +21,20 @@ async def inline_handler(inline_query: InlineQuery):
 
     print(f"👀 [STEP 1] User typed in inline: {text[:20]}...")
 
+    temp_keyboard = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text="rendering ...", callback_data="ignore")
+    ]])
+
     result = InlineQueryResultArticle(
         id="1",
         title= "Rich Message",
         description= "inline render",
         input_message_content=InputTextMessageContent(
             message_text="wait .."
-        )
+        ),
+        reply_markup=temp_keyboard
     )
+
 
     await inline_query.answer([result], cache_time=0)
 
