@@ -96,7 +96,8 @@ python -m src.main
 این پروژه فورک و بازنویسی پایتون از ربات TeleRich است.
 
 - **Arshia** (بازنویسی پایتون و توسعه اینلاین)
-  [گیت‌هاب](https://github.com/arshiacomplus) • [کانال تلگرام](https://t.me/acplus_channel)
+  [گیت‌هاب](https://github.com/arshiacomplus) • [کانال تلگرام](https://t.me/acplus_channel)  •  [ربات](https://t.me/mdrich_bot)
+
 
 - **ÐΛɌ₭ᑎΞ𐒡𐒡 | 𓄂𓆃** (خالق نسخه اصلی جاوا اسکریپت)
-  [سورس اصلی](https://github.com/DarknessShade/TeleRich) • [کانال تلگرام](https://t.me/Paradise_Of_Freedom)
+  [سورس اصلی](https://github.com/DarknessShade/TeleRich) • [کانال تلگرام](https://t.me/Paradise_Of_Freedom) •  [ربات](https://t.me/MarkdownRenderBot)
